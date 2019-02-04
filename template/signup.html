@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+
+
+
+{% block title %}Sign Up{% endblock %}
+
+
+
+    {% block jobs %}
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form method="post">{% csrf_token %}
+            {{form.as_p}}
+            <button class="btn btn-success ml-2" type="submit">Sign Up</button>	
+        </form>
+
+    </div>
+
+	
+
+{% endblock jobs %}
+
+
+
+
+
+{% block footer %}
+    
+{% endblock footer %}
+    
