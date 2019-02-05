@@ -38,10 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    
+
 
     # Local Apps
     'jobs',
     'accounts',
+    'sendemail',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +136,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'coolpythoncodes'
+EMAIL_HOST_PASSWORD = 'rapture1995'
+DEFAULT_FROM_EMAIL = 'godsonchuks.gc@gmail.com'
