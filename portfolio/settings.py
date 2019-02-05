@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    
+
+    # Third party apps
+    'crispy_forms',
 
 
     # Local Apps
